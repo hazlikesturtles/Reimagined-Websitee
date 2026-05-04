@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REIMAGINED - Heicha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;800&family=Roboto:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="heicha_page.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="nav">
+            <span onclick="window.location.href='home_page.html'">HOME</span>
+            <span onclick="window.location.href='map_page.html'">MAPS</span>
+            <span onclick="window.location.href='characters_page.html'">CHARACTERS</span>
+            <span onclick="window.location.href='about_page.html'">ABOUT US</span>
+        </nav>
+        <button class="play-btn" onclick="window.open('https://al223.itch.io/reimagined?fbclid=IwY2xjawRlNRxleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAEwAAEe1C1gOhUWRrrajjThUotOEHoEVdFtuOYBFZCCfUmhiuZLqoW4iOsluv87J8U_aem_AFecYnWgBAmRG6Qw_p6D0A','_blank')">PLAY NOW</button>
+    </header>
+
+    <!-- HERO / PROFILE SECTION -->
+    <section class="profile-hero">
+
+        <img class="hero-bg" src="heicha_bg.jpg" alt="background">
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <!-- LEFT: text -->
+            <div class="hero-left">
+
+                <button class="back-btn" id="backBtn">
+                    <span class="arrow">←</span> BACK TO TEAM
+                </button>
+
+                <div class="hero-motto">ALWAYS IN PROGRESS</div>
+
+                <p class="hero-bio">
+                    Hi, I'm Heicha M. Meneses. As an IT student and aspiring game developer, I focus on creating software that is as efficient as it is aesthetic.
+                </p>
+
+                <div class="skills-tags">
+                    <span class="tag">Logical Reasoning</span>
+                    <span class="tag">Creative Thinking</span>
+                    <span class="tag">Problem Solving</span>
+                </div>
+
+            </div>
+
+            <!-- RIGHT: photo -->
+            <div class="hero-right">
+                <div class="photo-circle">
+                    <img src="heicha.jpg" alt="Heicha">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- BEFORE FOOTER -->
+    <div class="before-footer">
+        <p>NOW AVAILABLE ON BROWSER</p>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="socials">
+            <div class="s-icon">
+                <svg viewBox="0 0 46 43" fill="none">
+                    <ellipse cx="23" cy="21.5" rx="22" ry="20.5" fill="#D9D9D9" stroke="black"/>
+                    <rect x="16" y="13.5" width="14" height="14" rx="3" stroke="black" stroke-width="2"/>
+                    <circle cx="23" cy="20.5" r="3" stroke="black" stroke-width="2"/>
+                    <path d="M28.5 16H28.51" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="s-icon">
+                <svg viewBox="0 0 46 43" fill="none">
+                    <ellipse cx="23" cy="21.5" rx="22" ry="20.5" fill="#D9D9D9" stroke="black"/>
+                    <path d="M25 14.5H27V11.5H25C22.7909 11.5 21 13.2909 21 15.5V17.5H19V20.5H21V29.5H24V20.5H26L27 17.5H24V15.5C24 14.9477 24.4477 14.5 25 14.5Z" stroke="black" stroke-width="2"/>
+                </svg>
+            </div>
+            <div class="s-icon">
+                <svg viewBox="0 0 46 43" fill="none">
+                    <ellipse cx="23" cy="21.5" rx="22" ry="20.5" fill="#D9D9D9" stroke="black"/>
+                    <path d="M23 11.5C16.3726 11.5 11 16.8726 11 23.5C11 28.8995 14.4385 33.4734 19.2054 35.1471C19.8054 35.2585 20.0259 34.8889 20.0259 34.5712C20.0259 34.2858 20.0151 33.4295 20.0098 32.5149C16.671 33.2372 15.9673 30.9775 15.9673 30.9775C15.4214 29.5092 14.6345 29.1414 14.6345 29.1414C13.5452 28.4013 14.7173 28.4162 14.7173 28.4162C15.9214 28.5025 16.5554 29.6481 16.5554 29.6481C17.6259 31.4871 19.3647 30.9543 20.0473 30.6471C20.1551 29.8712 20.4668 29.3395 20.8098 29.0393C18.1451 28.7355 15.3432 27.6971 15.3432 23.0709C15.3432 21.6779 15.8102 20.5412 16.5793 19.6491C16.4554 19.3454 16.0432 18.1235 16.6976 16.4632C16.6976 16.4632 17.7042 16.1401 19.9964 17.6868C20.9536 17.42 21.9786 17.2863 23.0002 17.2814C24.0217 17.2863 25.0474 17.42 26.0064 17.6868C28.2964 16.1401 29.3011 16.4632 29.3011 16.4632C29.9572 18.1235 29.5449 19.3454 29.421 19.6491C30.1919 20.5412 30.6554 21.6779 30.6554 23.0709C30.6554 27.7077 27.8482 28.7319 25.1745 29.0286C25.6061 29.4018 25.9906 30.1393 25.9906 31.2653C25.9906 32.8818 25.9764 34.1851 25.9764 34.5712C25.9764 34.8907 26.1934 35.2632 26.8023 35.1453C31.5656 33.4698 35 28.8977 35 23.5C35 16.8726 29.6274 11.5 23 11.5Z" stroke="black" stroke-width="2"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="footer-logo">
+            <img src="footer_logo.png" alt="logo">
+            <h3>REIMAGINED</h3>
+        </div>
+
+        <p class="copyright">© 2026 Ch4OS Games. All Rights Reserved.</p>
+
+        <div class="footer-links">
+            <span>PRIVACY NOTICE</span>
+            <span>TERMS OF SERVICE</span>
+            <span>COOKIE PREFERENCES</span>
+        </div>
+    </footer>
+
+    <script src="heicha_page.js"></script>
+</body>
+</html>

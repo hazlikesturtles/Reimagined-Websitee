@@ -95,16 +95,16 @@ p { margin: 0; }
     padding: 15px 24px;
     border-radius: 2px;
     cursor: pointer;
-    transition: background 0.2s ease, transform 0.15s ease;
+    transition: background 0.25s ease, opacity 0.25s ease;
 }
 
 .play-now-button:hover {
-    background: #ffbb1d;
-    transform: scale(1.05);
+    background: #2a2800;
+    opacity: 0.85;
 }
 
 .play-now-button:hover p {
-    color: #030200;
+    color: white;
 }
 
 .play-now-button p {
@@ -116,61 +116,93 @@ p { margin: 0; }
     line-height: normal;
 }
 
-/* Header */
+/* ─── Header — Sticky & Bigger ─────────────────────────────────────────────── */
+/* The header sits OUTSIDE .scale-wrap so it can be position:fixed without
+   being clipped or scaled. It always spans the full viewport width and
+   uses a JS-driven left offset so it stays centred with the scaled content. */
+
 .header {
-    position: absolute;
-    height: 80px;
-    left: 0; top: 0;
-    width: 1440px;
-    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    gap: 4px;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 2px 16px rgba(0,0,0,0.25);
+    transition: top 0.3s ease, background 0.3s ease;
+}
+
+.header.scrolled {
+    background: rgba(10, 10, 10, 0.92);
+}
+
+.header.hidden {
+    top: -70px;
 }
 
 .header-container {
     position: absolute;
-    height: 80px;
-    left: 0; top: 0;
-    width: 1440px;
+    inset: 0;
 }
 
 .header-button {
-    position: absolute;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 12px 24px;
-    border-radius: 15px;
-    top: 21px;
+    width: fit-content;
+    padding: 10px 18px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: background 0.2s ease;
+    transition: background 0.25s ease;
 }
 
 .header-button p {
     font-family: 'Lato', sans-serif;
     font-weight: 800;
-    font-size: 12px;
-    color: black;
+    font-size: 15px;
+    color: white;
     white-space: nowrap;
     line-height: normal;
 }
 
-.header-button.about-us  { left: 390px; }
-.header-button.characters { left: 263px; }
-.header-button.maps       { left: 180px; }
-.header-button.home       { left: 94px; }
+.header-button.home,
+.header-button.maps,
+.header-button.characters,
+.header-button.about-us {
+    left: auto;
+    top: auto;
+}
 
 .header-button.home:hover,
 .header-button.maps:hover,
 .header-button.characters:hover,
 .header-button.about-us:hover {
-    background: white;
+    background: rgba(255, 255, 255, 0.15);
 }
 
 .header-button.play-now-white {
-    left: 1237px;
-    background: white;
+    margin-left: auto;
+    left: auto;
+    background: #ffbb1d;
+    border-radius: 5px;
 }
 
-.header-button.play-now-white p { font-weight: 400; }
+.header-button.play-now-white p {
+    font-weight: 700;
+    color: #030200;
+}
+
+.header-button.play-now-white:hover {
+    background: #ffd060;
+}
 
 /* Center Logo */
 .center-logo {
@@ -403,12 +435,12 @@ p { margin: 0; }
     padding: 12px 24px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.2s ease, transform 0.15s ease;
+    transition: background 0.25s ease, filter 0.25s ease;
 }
 
 .view-maps-button:hover {
-    background: #1a6fd4;
-    transform: scale(1.05);
+    background: #e6a800;
+    filter: brightness(0.95);
 }
 
 .view-maps-button:hover p {
@@ -487,12 +519,12 @@ p { margin: 0; }
     padding: 12px 24px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.2s ease, transform 0.15s ease;
+    transition: background 0.25s ease, filter 0.25s ease;
 }
 
 .view-characters-button:hover {
-    background: #1a6fd4;
-    transform: scale(1.05);
+    background: #e6a800;
+    filter: brightness(0.95);
 }
 
 .view-characters-button:hover p {

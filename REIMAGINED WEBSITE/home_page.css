@@ -48,7 +48,7 @@ p { margin: 0; }
     position: absolute;
     left: 50%; top: 241px;
     transform: translateX(-50%);
-    width: 679px; height: 150px;
+    width: 900px; height: 180px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,7 +58,7 @@ p { margin: 0; }
 .hero-title p {
     font-family: 'Roboto', sans-serif;
     font-weight: 800;
-    font-size: 64px;
+    font-size: 96px;
     color: white;
     white-space: nowrap;
     line-height: normal;
@@ -66,18 +66,18 @@ p { margin: 0; }
 
 .hero-subtitle {
     position: absolute;
-    left: 50%; top: 390.5px;
+    left: 50%; top: 410px;
     transform: translate(-50%, -50%);
-    width: 483px; height: 33px;
+    width: 680px; height: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-family: 'Lato', sans-serif;
     font-weight: 700;
-    font-size: 12px;
+    font-size: 18px;
     color: #fffdf0;
     text-align: center;
-    line-height: 1.251;
+    line-height: 1.4;
 }
 
 .play-now-hero {
@@ -207,9 +207,11 @@ p { margin: 0; }
 /* Center Logo */
 .center-logo {
     position: absolute;
-    height: 25px;
-    left: 624px; top: 228px;
-    width: 180px;
+    height: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 200px;
+    width: 320px;
 }
 
 .center-logo img {
